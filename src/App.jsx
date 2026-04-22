@@ -7,7 +7,7 @@ const App = () => {
   const [show, setShow] = useState(3);
 
   useEffect(() => {
-    if (search.length > 3) {
+    if (search.length >= 2) {
       fetch(`https://dummyjson.com/products/search?q=${search}`)
         .then(res => res.json())
         .then(data => setProducts(data.products))
